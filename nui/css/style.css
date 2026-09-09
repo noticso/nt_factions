@@ -1,0 +1,498 @@
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Bold.ttf) url(../fonts/Poppins-LightItalic.ttf)  url(../fonts/Poppins-Regular.ttf) url(../fonts/Poppins-Thin.ttf) url(../fonts/Poppins-BlackItalic.ttf)  ;
+}
+@font-face{
+    font-family: 'SedgwickAveDisplay';
+    src: url(../fonts/SedgwickAveDisplay-Regular.ttf)
+}
+@keyframes animate-enter-frames {
+    from{opacity: 0;
+    transform: translate(-50%,0);
+  }
+  to{opacity: 1;
+  transform: translate(-50%, -50%);
+  }
+  }
+*{
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: white
+}
+.lt{
+    position: absolute;
+    top:20px;
+    left:40px;
+    background: rgba(0,0,0,0);
+    border:none;
+    overflow: hidden;
+    cursor: pointer;
+    
+  }
+  .lt > h1{
+    color: #AA186B
+  }
+.container, .container-fazioni, .container-list, .container-deposito, .container-boss, .container-vestiti, .container-veicoli{
+    text-align: center;
+    position: absolute;
+    font-family:'Poppins', sans-serif;
+    width: 140vh;
+    height: 85vh;
+    border: none;
+    border-radius: 2vh;
+    background-color: #2f2f2f;
+    box-shadow: rgba(0, 0, 0, 0.3) 0vh 0.3vh 5vh, rgba(0, 0, 0, 0.22) 0vh 0.7vh 1.5vh; 
+    animation: animate-enter-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.head{
+    font-family: 'SedgwickAveDisplay', sans-serif !important;
+    margin-top:10px;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5), 2px 0px 10px #AA186B;
+}
+.add-fazione{
+    box-shadow: 0px 0px 36px 0px #AA186B;
+    width: 40rem;
+    height: 15rem;
+    position: absolute;
+    left:40px;
+    top: 120px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+.add-fazione:hover{
+    transform: scale(1.1);
+}
+.add-fazione > h1{
+   position: absolute;
+   right: 35px;
+}   
+.container-img-fazione{
+    background: radial-gradient(ellipse at top, #570c36, transparent),
+    radial-gradient(ellipse at left, #aa186b, transparent), radial-gradient(ellipse at left, #aa186b, transparent),radial-gradient(ellipse at right, #aa186b, transparent);
+    width: 300px;
+    height: 240px;
+    position: absolute;
+    left:0px;
+    border-top-right-radius: 400px;
+}
+.img-fazione{
+    width: 200px;
+    position: absolute;
+    top:40px;
+    left:0px
+}
+.btn{
+    color:rgb(231, 231, 231);
+    background: linear-gradient(to top, #2d2d2f 0%,  #4b4b4e 100%);
+    margin:50px;
+    width: 100px;
+    height: 25px;
+    border-radius: 30px; 
+    border: 0px black solid;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: bold;
+    background: radial-gradient(ellipse at top, #570c36, transparent),
+    radial-gradient(ellipse at left, #aa186b, transparent), radial-gradient(ellipse at left, #aa186b, transparent),radial-gradient(ellipse at right, #aa186b, transparent);
+    
+}
+.add-fazioni-btn{
+    position: absolute;
+    right: 80px;
+    bottom:10px
+}
+.add-deposito{
+    box-shadow: 0px 0px 36px 0px #AA186B;
+    width: 30rem;
+    height: 15rem;
+    position: absolute;
+    right:300px;
+    border-radius: 14px; 
+    transition: all 0.2s ease;
+    top: 120px;
+}
+.add-deposito:hover{
+    transform: scale(1.1);
+}
+.img-deposito{
+    width: 150px;
+    position: absolute;
+    top:60px;
+    left:45px
+}
+.container-img-deposito{
+    background: radial-gradient(ellipse at top, #570c36, transparent),
+    radial-gradient(ellipse at left, #aa186b, transparent), radial-gradient(ellipse at left, #aa186b, transparent),radial-gradient(ellipse at right, #aa186b, transparent);
+    width: 180px;
+    height: 240px;
+    position: absolute;
+    right:0px;
+    top:10px;
+    border-top-left-radius: 400px;
+}
+.add-deposito > h1{
+    position: absolute;
+    top:105px;
+    left:25px;
+}
+.add-deposito-btn{
+    position: absolute;
+    bottom: 10px;
+    left:100px
+}
+.list-fazioni{
+    text-align: center;
+    box-shadow: 0px 0px 36px 0px #AA186B;
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    right:20px;
+    border-radius: 14px; 
+    transition: all 0.2s ease;
+    top: 120px;
+    
+}
+.list-fazioni > h1{
+    margin-top: 15px;
+}
+.list-fazioni:hover{
+    transform: scale(1.1);
+}
+.vector-list{
+    height: 200px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0vh 0.3vh 5vh, rgba(255, 255, 255, 0.22) 0vh 0.7vh 1.5vh;
+    border-radius: 40%;
+    margin-top:50px
+}
+.add-boss{
+    box-shadow: 0px 0px 36px 0px #AA186B;
+    width: 50rem;
+    height: 13rem;
+    position: absolute;
+    border-radius: 14px; 
+    transition: all 0.2s ease;
+    left:40px;
+    top: 400px;
+}
+.add-boss:hover{
+    transform: scale(1.08);
+}
+.img-boss{
+    width: 200px;
+    position: absolute;
+    top:20px;
+    right: 20px
+}
+.container-img-boss{
+    background: radial-gradient(ellipse at top, #570c36, transparent),
+    radial-gradient(ellipse at left, #aa186b, transparent), radial-gradient(ellipse at left, #aa186b, transparent),radial-gradient(ellipse at right, #aa186b, transparent);
+    width: 300px;
+    height: 240px;
+    position: absolute;
+    right:0px;
+    border-top-left-radius: 400px;
+}
+.add-boss-btn{
+    position: absolute;
+    top:85px;
+    left:180px;
+}
+.add-boss > h1{
+    position: absolute;
+    top:85px;
+    left:85px;
+}
+.add-vestiti{
+    box-shadow: 0px 0px 36px 0px #AA186B;
+    width: 35rem;
+    height: 13rem;
+    position: absolute;
+    border-radius: 14px; 
+    transition: all 0.2s ease;
+    right:40px;
+    top: 400px;
+}
+.add-vestiti:hover{
+    transform: scale(1.08);
+}
+.container-img-vestiti{
+    background: radial-gradient(ellipse at top, #570c36, transparent),
+    radial-gradient(ellipse at left, #aa186b, transparent), radial-gradient(ellipse at left, #aa186b, transparent),radial-gradient(ellipse at right, #aa186b, transparent);
+    width: 200px;
+    height: 240px;
+    position: absolute;
+    left:0px;
+    border-top-right-radius: 400px;
+}
+.img-vestiti{
+    width: 200px;
+    position: absolute;
+    top:20px;
+    left: -15px
+}
+.add-vestiti > h1{
+    position: absolute;
+    top:85px;
+    right:5px;
+}
+.add-vestiti-btn{
+    position: absolute;
+    top:85px;
+    right:120px;
+}
+.add-veicoli{
+    box-shadow: 0px 0px 36px 0px #AA186B;
+    width: 35rem;
+    height: 13rem;
+    position: absolute;
+    border-radius: 14px; 
+    transition: all 0.2s ease;
+    left:40px;
+    top: 660px;
+}
+.add-veicoli:hover{
+    transform: scale(1.08);
+}
+.container-img-veicoli{
+    background: radial-gradient(ellipse at top, #570c36, transparent),
+    radial-gradient(ellipse at left, #aa186b, transparent), radial-gradient(ellipse at left, #aa186b, transparent),radial-gradient(ellipse at right, #aa186b, transparent);
+    width: 200px;
+    height: 240px;
+    position: absolute;
+    left:0px;
+    border-top-right-radius: 400px;
+}
+.img-veicoli{
+    width: 200px;
+    position: absolute;
+    top:60px;
+    left: -15px
+}
+.add-veicoli-btn{
+    position: absolute;
+    top:85px;
+    right:100px;
+}
+.add-veicoli > h1{
+    position: absolute;
+    top:85px;
+    right:45px;
+}
+.developed{
+    box-shadow: 0px 0px 36px 0px #AA186B;
+    width: 50rem;
+    height: 13rem;
+    position: absolute;
+    border-radius: 14px; 
+    transition: all 0.2s ease;
+    right:40px;
+    top: 660px;
+}
+.developed:hover{
+    transform: scale(1.08);
+}
+.container-img-developed{
+    background: radial-gradient(ellipse at top, #570c36, transparent),
+    radial-gradient(ellipse at left, #aa186b, transparent), radial-gradient(ellipse at left, #aa186b, transparent),radial-gradient(ellipse at right, #aa186b, transparent);
+    width: 300px;
+    height: 240px;
+    position: absolute;
+    left:0px;
+    border-top-right-radius: 400px;
+}
+.img-developed{
+    width: 150px;
+    position: absolute;
+    top:35px;
+    left: 50px
+}
+.developed > h1{
+    position: absolute;
+    top:75px;
+    right:105px;
+}
+.developed-btn{
+    position: absolute;
+    top:75px;
+    right:150px;
+}
+.container-fazioni, .container-deposito, .container-boss, .container-vestiti, .container-veicoli{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input{
+    color: white;
+    width: 300px;
+    height: 30px;
+    border-radius: 30px;
+    border: 0px;
+    text-align: center;
+    background: linear-gradient(to top, #AA186B 0%,  #4b4b4e 100%);
+
+}
+.input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+.input:focus{
+    border:0px;
+    outline: 0px
+}
+.fazioni-form, .deposito-form, .boss-form, .vestiti-form, .veicoli-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 36px 0px #AA186B;
+    border-radius: 30px;
+    height: 700px;
+    width: 500px;
+}
+.veicoli-form{
+    height: 860px
+}
+.img-form-fazione, .img-form-deposito, .img-form-boss, .img-form-vestiti{
+    width: 180px;
+    position: absolute;
+    top:120px
+}
+.fazioni-form > p{
+    position: absolute;
+    bottom:200px;
+    color: #3d3d3d;
+}
+.fazioni-form > h1{
+    margin-top:100px
+}
+.btn-add{
+    width: 300px;
+    color:rgb(231, 231, 231);
+    border-radius: 30px; 
+    border: 0px black solid;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: bold;
+    background: radial-gradient(ellipse at top, #570c36, transparent),
+    radial-gradient(ellipse at left, #aa186b, transparent), radial-gradient(ellipse at left, #aa186b, transparent),radial-gradient(ellipse at right, #aa186b, transparent);
+    height: 30px;
+
+}
+
+.container-list > h1{
+    margin-top:10px
+}
+.grid{
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 50px;
+    
+}
+.grid-item{
+    margin: 50px 60px;
+    box-shadow: 0px 0px 36px 0px #AA186B;
+    height: 280px;
+    border-radius: 14px; 
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grid-item:hover{
+    transform: scale(1.1);
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+    ::-webkit-scrollbar-track {
+    background: #420a2a; 
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+  }
+    ::-webkit-scrollbar-thumb {
+    background: #aa186b; 
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+.btn-del{
+    text-align: center;
+    width: 100px;
+    color:rgb(231, 231, 231);
+    border-radius: 30px; 
+    border: 0px black solid;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: bold;
+    background: radial-gradient(ellipse at top, #570c36, transparent),
+    radial-gradient(ellipse at left, #aa186b, transparent), radial-gradient(ellipse at left, #aa186b, transparent),radial-gradient(ellipse at right, #aa186b, transparent);
+    height: 30px;
+    
+  }
+.fazione-text{
+    color: #aa186b
+}
+.deposito-form > p{ 
+    position: absolute;
+    bottom:150px;
+    color: #3d3d3d;
+}
+.img-form-deposito{
+    width: 60px !important;
+    z-index: -1;
+    position: absolute;
+    top: 120px
+}
+.container-boss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boss-form{
+    padding-top:100px
+}
+.boss-form > p{ 
+    position: absolute;
+    bottom:150px;
+    color: #3d3d3d;
+}
+.vestiti-form > p{ 
+    position: absolute;
+    bottom:150px;
+    color: #3d3d3d;
+}
+.veicoli-form > p{ 
+    position: absolute;
+    bottom:50px;
+    color: #3d3d3d;
+}

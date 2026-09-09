@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    function del(id){
+        $.post(`https://${GetParentResourceName()}/delete`, JSON.stringify({id})) 
+        return
+      }</script>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>Gestione Fazione</h1>
+        </div>
+        <div class="container-items">
+            <div class="add-fazione">
+                <div class="container-img-fazione">
+                    <img src="./img/add-fazioni.png" class="img-fazione">
+                </div>
+                <h1>AGGIUNGI FAZIONE</h1>
+                <button class="btn add-fazioni-btn">AGGIUNGI</button>
+            </div>
+            <div class="add-deposito">
+                <div class="container-img-deposito">
+                    <img src="./img/cassaforte.png" class="img-deposito">
+                </div>
+                <h1>AGGIUNGI DEPOSITO</h1>
+                <button class="btn add-deposito-btn">AGGIUNGI</button>
+            </div>
+            <div class="list-fazioni">
+                <h1>FAZIONI</h1>
+                <div class="vector-list">
+                    <button class="btn btn-list">LISTA</button>
+                </div>
+            </div>
+            <div class="add-boss">
+                <div class="container-img-boss">
+                    <img src="./img/boss.png" class="img-boss">
+                </div>
+                <h1>AGGIUNGI BOSS MENU</h1>
+                <button class="btn add-boss-btn">AGGIUNGI</button>
+            </div>
+            <div class="add-vestiti">
+                <div class="container-img-vestiti">
+                    <img src="./img/vestiti.png" class="img-vestiti">
+                </div>
+                <h1>AGGIUNGI GUARDAROBA</h1>
+                <button class="btn add-vestiti-btn">AGGIUNGI</button>
+
+
+            </div>
+            <div class="add-veicoli">
+                <div class="container-img-veicoli">
+                    <img src="./img/car.png" class="img-veicoli">
+                </div>
+                <h1>AGGIUNGI GARAGE</h1>
+                <button class="btn add-veicoli-btn">AGGIUNGI</button>
+            </div>
+            <div class="developed">
+                <div class="container-img-developed">
+                    <img src="./img/logo.png" class="img-developed">
+                </div>
+                <h1>Developed by noticso</h1>
+                <button class="btn developed-btn">DISCORD</button>
+            </div>
+            <h3 class="discord">DISCORD noticso: https://discord.gg/r2zgnnC8Tq</h3>
+        </div>
+    </div>
+    <div class="container-fazioni">
+        <button class="lt"><h1>&lt;</h1></button>
+        <form class="fazioni-form" id="fazioni-form">
+            <img src="./img/add-fazioni.png" class="img-form-fazione">
+            <h1>AGGIUNGI FAZIONE</h1>
+            <br>
+            <br>
+            <input placeholder="NOME FAZIONE" type="text" class="input" id="nome-fazione" required>
+            <br>
+            <br>
+            <input placeholder="LABEL FAZIONE" type="text" class="input" id="label-fazione" required>
+            <p>Developed by noticso</p>
+            <br>
+            <br>
+            <button class="btn-add" id="fazione-add">AGGIUNGI</button>
+        </form>
+        
+    </div>
+    <div class="container-list">
+        <button class="lt"><h1>&lt;</h1></button>
+
+        <h1>LISTA FAZIONI</h1>
+        <div class="grid" id="grid">
+            
+
+        </div>
+    </div>
+    <div class="container-deposito">
+        <button class="lt"><h1>&lt;</h1></button>
+        <form class="deposito-form" id="deposito-form">
+            <img src="./img/cassaforte.png" class="img-form-deposito">
+            <h1>AGGIUNGI DEPOSITO</h1>
+            <br>
+            <br>
+            <input placeholder="NOME DEPOSITO" type="text" class="input" id="label-deposito" required>
+            <br>
+            <br>
+            <input placeholder="NUMERI SLOTS" type="number" min="1" class="input" id="slot-deposito" required>
+            <br>
+            <br>
+            <input placeholder="PESO DEPOSITO" type="number" min="1" class="input" id="peso-deposito" required>
+            <br>
+            <br>
+            <input placeholder="COORDINATE DEPOSITO X" type="number" class="input" id="coords-deposito-x" step="any" required>
+            <br>
+            <br>
+            <input placeholder="COORDINATE DEPOSITO Y" type="number" class="input" id="coords-deposito-y" step="any" required>
+            <br>
+            <br>
+            <input placeholder="COORDINATE DEPOSITO Z" type="number" class="input" id="coords-deposito-z" step="any" required>
+            <br>
+            <br>
+            <input placeholder="NAME FAZIONE DEPOSITO" type="text" class="input" id="fazione-deposito" required>
+            <br>
+            <br>
+            <button class="btn-add">AGGIUNGI</button>
+            <p>Developed by noticso</p>
+        </form>
+
+    </div>
+    <div class="container-boss">
+        <button class="lt"><h1>&lt;</h1></button>
+        <form class="boss-form" id="boss-form">
+            <img src="./img/boss.png" class="img-form-boss">
+            <h1>AGGIUNGI BOSS MENU</h1>
+            <br>
+            <br>
+            <input placeholder="FAZIONE NAME" type="text" class="input" id="name-boss" required>
+            <p>Developed by noticso</p>
+            <br>
+            <br>
+            <input placeholder="COORDINATE BOSS MENU X" type="number" class="input" id="coords-boss-x" step="any" required>
+            <br>
+            <br>
+            <input placeholder="COORDINATE BOSS MENU Y" type="number" class="input" id="coords-boss-y" step="any" required>
+            <br>
+            <br>
+            <input placeholder="COORDINATE BOSS MENU Z" type="number" class="input" id="coords-boss-z" step="any" required>
+            <br>
+            <br>
+            <button class="btn-add" id="boss-add">AGGIUNGI</button>
+        </form>
+        
+    </div>
+    <div class="container-vestiti">
+        <button class="lt"><h1>&lt;</h1></button>
+        <form class="vestiti-form" id="vestiti-form">
+            <img src="./img/vestiti.png" class="img-form-vestiti">
+            <h1>AGGIUNGI GUARDAROBA</h1>
+            <br>
+            <br>
+            <input placeholder="FAZIONE NAME" type="text" class="input" id="name-vestiti" required>
+            <p>Developed by noticso</p>
+            <br>
+            <br>
+            <input placeholder="COORDINATE GUARDAROBA X" type="number" class="input" id="coords-vestiti-x" step="any" required>
+            <br>
+            <br>
+            <input placeholder="COORDINATE GUARDAROBA Y" type="number" class="input" id="coords-vestiti-y" step="any" required>
+            <br>
+            <br>
+            <input placeholder="COORDINATE GUARDAROBA Z" type="number" class="input" id="coords-vestiti-z" step="any" required>
+            <br>
+            <br>
+            <button class="btn-add" id="vestiti-add">AGGIUNGI</button>
+        </form>
+        
+    </div>
+    <div class="container-veicoli">
+        <button class="lt"><h1>&lt;</h1></button>
+        <form class="veicoli-form" id="veicoli-form">
+            <img src="./img/car.png" class="img-form-veicoli">
+            <h1>AGGIUNGI GARAGE</h1>
+            <br>
+            <br>
+            <input placeholder="FAZIONE NAME" type="text" class="input" id="name-veicoli" required>
+            <p>Developed by noticso</p>
+            <br>
+            <br>
+            <input placeholder="COORDINATE GARAGE X" type="number" class="input" id="coords-veicoli-x" step="any">
+            <br>
+            <br>
+            <input placeholder="COORDINATE GARAGE Y" type="number" class="input" id="coords-veicoli-y" step="any" required>
+            <br>
+            <br>
+            <input placeholder="COORDINATE GARAGE Z" type="number" class="input" id="coords-veicoli-z" step="any" required>
+            <br>
+            <br>
+            <input placeholder="NAME VEICOLO 1" type="text" class="input" id="veh1" step="any" required>
+            <br>
+            <br>
+            <input placeholder="NAME VEICOLO 2" type="text" class="input" id="veh2" step="any" required>
+            <br>
+            <br>
+            <input placeholder="NAME VEICOLO 3" type="text" class="input" id="veh3" step="any" required>
+            <br>
+            <br>
+            <button class="btn-add" id="vestiti-add">AGGIUNGI</button>
+        </form>
+        
+    </div>
+    </div>
+</body>
+</html>
